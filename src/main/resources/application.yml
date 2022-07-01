@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+#spring.boot.admin.client:
+#  username: admin
+#  password: admin
+#
+#spring.boot.admin:
+#  instance-auth:
+#    enabled: true
+#    default-user-name: admin
+#    default-password: admin
+#    service-map:
+#      my-first-service-to-monitor:
+#        user-name: admin
+#        user-password: admin
+#
+#eureka:
+#  instance:
+#    metadata-map:
+#      user.name: admin
+#      user.password: admin
