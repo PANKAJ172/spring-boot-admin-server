@@ -21,7 +21,7 @@ WORKDIR /app
 COPY --from=build /app/target/spring-boot-admin-server-0.0.1-SNAPSHOT.jar .
 
 # Expose port 8080 for the application
-EXPOSE 8080
+EXPOSE 8081
 
 # Run the application using the java command
 CMD ["java", "-jar", "spring-boot-admin-server-0.0.1-SNAPSHOT.jar"]
