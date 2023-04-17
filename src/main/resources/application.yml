@@ -1,5 +1,11 @@
 server:
   port: 8081
+spring.boot.admin:
+  instance-auth:
+    enabled: true
+    default-user-name: admin
+    default-password: admin
+
 
 #spring.boot.admin.client:
 #  username: admin
