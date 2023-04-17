@@ -18,10 +18,10 @@ FROM openjdk:17-slim
 WORKDIR /app
 
 # Copy the built JAR file from the build image to the runtime image
-COPY --from=build /app/target/spring-boot-admin-server-0.0.1-SNAPSHOT.jar .
+COPY --from=build /app/target/*.jar ./app.jar
 
 # Expose port 8080 for the application
 EXPOSE 8081
 
 # Run the application using the java command
-CMD ["java", "-jar", "spring-boot-admin-server-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "app.jar"]
