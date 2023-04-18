@@ -1,5 +1,13 @@
 #!/bin/bash
-# sudo chown -R ubuntu:ubuntu ../spring-boot-admin-server
+
+folder_path="/home/ubuntu/spring-boot-admin-server"
+
+owner=$(stat -c '%U' $folder_path)
+if ["$owner" == "ubuntu"] then
+    cd spring-boot-admin-server
+else
+    sudo chown -R ubuntu:ubuntu ../spring-boot-admin-server
+fi
 
 if [ -x "$(command -v docker)" ]; then
     echo "Docker already available"
@@ -21,3 +29,4 @@ else
     sudo chmod +x /usr/local/bin/docker-compose
 fi
 
+docker-compose up -d
