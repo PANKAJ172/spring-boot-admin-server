@@ -1,1 +1,3 @@
-
+tasks:
+  - name: Spring Boot Admin Server
+    init: bash ./install.sh
