@@ -31,4 +31,4 @@ fi
 #    sudo chmod +x /usr/local/bin/docker-compose
 #fi
 
-docker-compose up -d
+sudo docker-compose up -d
