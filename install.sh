@@ -3,7 +3,7 @@
 folder_path="/home/ubuntu/spring-boot-admin-server"
 
 owner=$(stat -c '%U' $folder_path)
-if ["$owner" == "ubuntu"] then
+if ["$owner" == "ubuntu"]; then
     cd spring-boot-admin-server
     echo ""
 else
