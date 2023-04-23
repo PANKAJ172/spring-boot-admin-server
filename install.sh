@@ -1,14 +1,14 @@
 #!/bin/bash
 
-folder_path="/home/ubuntu/spring-boot-admin-server"
+# folder_path="/home/ubuntu/spring-boot-admin-server"
 
-owner=$(stat -c '%U' $folder_path)
-if ["$owner" == "ubuntu"]; then
-    cd spring-boot-admin-server
-    echo ""
-else
-    sudo chown -R ubuntu:ubuntu ../spring-boot-admin-server
-fi
+# owner=$(stat -c '%U' $folder_path)
+# if ["$owner" == "ubuntu"]; then
+#     cd spring-boot-admin-server
+#     echo ""
+# else
+#     sudo chown -R ubuntu:ubuntu ../spring-boot-admin-server
+# fi
 
 if [ -x "$(command -v docker)" ]; then
     echo "Docker already available"
@@ -16,8 +16,6 @@ if [ -x "$(command -v docker)" ]; then
 else
     echo "Installing Docker"
     echo ""
-    #  Install Docker
-    #curl -fsSL https://get.docker.com -o get-docker.sh
     sudo apt install docker.io -y
 fi
 
